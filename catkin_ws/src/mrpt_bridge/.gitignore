@@ -1,0 +1,8 @@
+*.autosave
+.kdev*
+*.kdev*
+*~
+*.rawlog
+LOG_*
+build*
+CMakeLists.txt.user*
