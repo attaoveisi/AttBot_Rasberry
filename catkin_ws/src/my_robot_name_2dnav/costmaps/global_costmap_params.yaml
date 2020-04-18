@@ -2,4 +2,10 @@ global_costmap:
  global_frame: map
  robot_base_frame: base_link
  update_frequency: 0.5
+ publish_frequency: 0.25
+ width: 250
+ height: 250
+ resolution: 0.1
  static_map: true
+ plugins:
+      - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}﻿
