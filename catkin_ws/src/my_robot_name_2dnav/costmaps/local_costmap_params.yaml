@@ -5,10 +5,14 @@ local_costmap:
  publish_frequency: 0.25
  static_map: false
  rolling_window: true
- width: 250
- height: 250
+ width: 50
+ height: 50
+ width: 8
+ height: 8
+ origin_x: -4
+ origin_y: -4
  resolution: 0.1
  transform_tolerance: 0.5 
  plugins:
-   - {name: static_layer,        type: "costmap_2d::StaticLayer"}
+   - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
