@@ -11,7 +11,7 @@ double pos_deltax,pos_deltay;
 std_msgs::String bangbang_msg;
 nav_msgs::Path gPlan;
 
-void cmd_pos_Callback(nav_msgs::Path& msg)
+void cmd_pos_Callback(const nav_msgs::Path& msg)
 {
     ROS_INFO_STREAM("Received pose: " << msg);
     geometry_msgs::PoseStamped pose;
@@ -29,7 +29,7 @@ void cmd_pos_Callback(nav_msgs::Path& msg)
   pos_y_cmd = pose.pose.position.y;
 }
 
-void ekf_pos_Callback(geometry_msgs::PoseWithCovarianceStamped& msg)
+void ekf_pos_Callback(const geometry_msgs::PoseWithCovarianceStamped& msg)
 {
   pos_x = msg.pose.pose.position.x;
   pos_y = msg.pose.pose.position.y;
