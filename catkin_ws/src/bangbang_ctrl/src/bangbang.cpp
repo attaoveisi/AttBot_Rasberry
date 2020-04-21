@@ -53,7 +53,7 @@ int main(int argc, char **argv)
     pos_deltay =  (pos_y_cmd-pos_y);
 
     if(pos_deltax > 0){
-        if (abs(pos_deltay) < 0.05){
+        if (abs(pos_deltay) < 100){
             bangbang_msg.data = 1;
         }else if(pos_deltay > 0){
             bangbang_msg.data = 2;
