@@ -6,6 +6,8 @@
 #include <sstream>
 
 double pos_x,pos_y;
+double pos_x0 = 12.4;
+double pos_y0 = 12.4;
 double pos_x_cmd,pos_y_cmd;
 double pos_deltax,pos_deltay;
 std_msgs::UInt16 bangbang_msg;
@@ -49,11 +51,11 @@ int main(int argc, char **argv)
   ros::spinOnce();
 
   while (ros::ok()){
-    pos_deltax =  (pos_x_cmd-pos_x);
-    pos_deltay =  (pos_y_cmd-pos_y);
+    pos_deltax =  (pos_x_cmd-pos_x-pos_x0);
+    pos_deltay =  (pos_y_cmd-pos_y-pos_y0);
 
     if(pos_deltax > 0){
-        if (abs(pos_deltay) < 100){
+        if (abs(pos_deltay) < 0.5){
             bangbang_msg.data = 1;
         }else if(pos_deltay > 0){
             bangbang_msg.data = 2;
