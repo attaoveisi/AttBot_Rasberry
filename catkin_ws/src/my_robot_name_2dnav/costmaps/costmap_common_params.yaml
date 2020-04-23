@@ -1,6 +1,6 @@
 footprint: [ [-0.15,-0.15], [0.15,-0.15], [0.15,0.15], [-0.15,0.15] ]
 transform_tolerance: 0.5
-map_type: costmap
+#map_type: costmap
 obstacle_layer:
  enabled: true
  obstacle_range: 3.0
