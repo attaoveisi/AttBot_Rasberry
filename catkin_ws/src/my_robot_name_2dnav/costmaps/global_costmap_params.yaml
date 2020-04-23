@@ -9,6 +9,6 @@ global_costmap:
  origin_x: -125
  origin_y: -125
  resolution: 0.1
- static_map: true
+ #static_map: true
  plugins:
    - {name: static_layer,        type: "costmap_2d::StaticLayer"}
