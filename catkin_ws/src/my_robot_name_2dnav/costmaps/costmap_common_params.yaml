@@ -24,3 +24,21 @@ obstacle_layer:
      scan:
        data_type: LaserScan
        topic: scan
+ local_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 0.5
+  publish_frequency: 0.25
+  #static_map: false
+  rolling_window: true
+  width: 50
+  height: 50
+  width: 8
+  height: 8
+  origin_x: -4
+  origin_y: -4
+  resolution: 0.1
+  transform_tolerance: 0.5 
+  plugins:
+    - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
+    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
