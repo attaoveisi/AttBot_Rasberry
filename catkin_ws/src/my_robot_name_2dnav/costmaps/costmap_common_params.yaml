@@ -18,7 +18,7 @@ obstacle_layer:
      enabled: true
      obstacle_range: 5.0
      raytrace_range: 1.0
-     observation_sources: "/scan"
+     observation_sources: scan
      observation_persistence: 0.0
      inf_is_valid: false
      scan:
