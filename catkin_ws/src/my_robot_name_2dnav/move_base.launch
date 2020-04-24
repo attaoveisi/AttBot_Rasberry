@@ -2,7 +2,10 @@
 
    <master auto="start"/>
  <!-- Run the map server --> 
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find my_robot_name_2dnav)/mymap.pgm 0.1"/>
+ <!-- node name="map_server" pkg="map_server" type="map_server" args="$(find my_robot_name_2dnav)/mymap.pgm 0.1"/> -->
+    <arg name="map_file" default="$(find my_robot_name_2dnav)/mymap.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+    <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find my_robot_name_2dnav)/mymap.pgm 0.1"/> -->
 
  <!--- Run AMCL --> 
     <include file="$(find amcl)/examples/amcl_omni.launch" />
