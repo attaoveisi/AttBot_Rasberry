@@ -29,7 +29,7 @@ obstacle_layer:
   robot_base_frame: base_link
   update_frequency: 0.5
   publish_frequency: 0.25
-  #static_map: false
+  ##static_map: false
   rolling_window: true
   width: 50
   height: 50
