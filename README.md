@@ -6,4 +6,7 @@ Here is AttBot 1.0 in action:
 
 And here is a video of the robot in Navigation and Localization: https://youtu.be/UzLwRp3oSOQ
 
-https://media.giphy.com/media/mEDpd7oKJKSOjX5KLO/giphy.gif
+![image](https://media.giphy.com/media/mEDpd7oKJKSOjX5KLO/giphy.gif)
+
+
+
